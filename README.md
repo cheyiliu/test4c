@@ -2,7 +2,7 @@ test4c
 ======
 
 test proj
-
+* 20141027 add socket test
 * 20141024 add [linux下的C语言编程](http://blog.csdn.net/feixiaoxing/article/details/7271937)
    * thread mutex
    * thred join
