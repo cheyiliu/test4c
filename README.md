@@ -2,6 +2,7 @@ test4c
 ======
 
 test proj
+* 20141107 add socket example from http://www.gnu.org/software/libc/manual
 * 20141028 add sqlite test
 * 20141027 add socket test
 * 20141024 add [linux下的C语言编程](http://blog.csdn.net/feixiaoxing/article/details/7271937)
