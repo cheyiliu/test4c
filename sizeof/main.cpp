@@ -1,3 +1,9 @@
+/**
+ * see https://github.com/cheyiliu/All-in-One/wiki/sizeof
+ * 1. 数据自身的对齐
+ * 2. 整个结构体的对齐
+ */
+
 #include <stdio.h>
 
 class class_c1 {
