@@ -2,6 +2,7 @@ test4c
 ======
 
 test proj
+* 20141126 sizeof
 * 20141113 add getopt test
 * 20141107 add socket/local socket example from http://www.gnu.org/software/libc/manual
 * 20141028 add sqlite test
