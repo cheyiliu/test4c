@@ -1,6 +1,8 @@
 ### the output is below on my 64 bit pc
 
 ```
+housy@housy-desktop:~/github/test4c/sizeof$ ./main 
+
 ---------sizeof 类------
 sizeof(class_c1) = 24
 sizeof(class_c2) = 32
@@ -22,16 +24,20 @@ sizeof(float*)  = 8
 sizeof(double*) = 8
 
 ---------sizeof 结构体，涉及结构体对齐的知识点------
-sizeof(struct s1) = 24
-sizeof(struct s2) = 16
-sizeof(struct s3) = 14
+sizeof(struct struct_s1) = 24
+sizeof(struct struct_s2) = 16
+sizeof(struct struct_s3) = 14
+sizeof(struct s1) = 16
+sizeof(struct s2) = 24
+sizeof(struct s3) = 24
+sizeof(struct s4) = 16
 
 ---------地址 of 结构体变量------
-address of ss2   = 0x7fff8d35a810
-address of ss2.a = 0x7fff8d35a810
-address of ss2.b = 0x7fff8d35a811
-address of ss2.c = 0x7fff8d35a814
-address of ss2.d = 0x7fff8d35a818
+address of ss2   = 0x7fffe2b24b30
+address of ss2.a = 0x7fffe2b24b30
+address of ss2.b = 0x7fffe2b24b31
+address of ss2.c = 0x7fffe2b24b34
+address of ss2.d = 0x7fffe2b24b38
 
 ---------sizeof 稍微复杂点的例子------
 8
@@ -43,5 +49,6 @@ address of ss2.d = 0x7fff8d35a818
 ---------sizeof 函数参数------
 sizeof(arg)   = 8
 housy@housy-desktop:~/github/test4c/sizeof$ 
+
 
 ```

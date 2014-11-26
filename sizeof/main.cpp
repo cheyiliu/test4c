@@ -43,6 +43,35 @@ struct struct_s3 { // 成员和struct_s2一样，顺序和类型，注意对比
 };
 #pragma pack ()
 
+struct s1 {
+	int i :8; // 位域， 一个int有4个B，这里i只占8bit
+	int j :4;
+	int a :3;
+	double b;
+
+};
+
+struct s2 {
+	int i;
+	int j;
+	double b;
+	int a;
+};
+
+struct s3 {
+	int i;
+	int j;
+	int a;
+	double b;
+};
+
+struct s4 {
+	int i :8;
+	int j :4;
+	int a :3;
+	double b;
+};
+
 void printSizeof(int arg[]) {
 	printf("sizeof(arg)   = %lu\n", sizeof(arg)); // 数组类型自动弱化为指针类型
 }
@@ -69,9 +98,14 @@ int main() {
 	printf("sizeof(double*) = %lu\n", sizeof(double*));
 
 	printf("\n---------sizeof 结构体，涉及结构体对齐的知识点------\n");
-	printf("sizeof(struct s1) = %lu\n", sizeof(struct struct_s1));
-	printf("sizeof(struct s2) = %lu\n", sizeof(struct struct_s2));
-	printf("sizeof(struct s3) = %lu\n", sizeof(struct struct_s3));
+	printf("sizeof(struct struct_s1) = %lu\n", sizeof(struct struct_s1));
+	printf("sizeof(struct struct_s2) = %lu\n", sizeof(struct struct_s2));
+	printf("sizeof(struct struct_s3) = %lu\n", sizeof(struct struct_s3));
+
+	printf("sizeof(struct s1) = %lu\n", sizeof(struct s1));
+	printf("sizeof(struct s2) = %lu\n", sizeof(struct s2));
+	printf("sizeof(struct s3) = %lu\n", sizeof(struct s3));
+	printf("sizeof(struct s4) = %lu\n", sizeof(struct s4));
 
 	printf("\n---------地址 of 结构体变量------\n");
 	struct struct_s2 ss2;
@@ -80,6 +114,13 @@ int main() {
 	printf("address of ss2.b = %p\n", &ss2.b);
 	printf("address of ss2.c = %p\n", &ss2.c);
 	printf("address of ss2.d = %p\n", &ss2.d);
+
+//	struct s4 varS4;
+//	printf("address of varS4   = %p\n", &varS4);
+//	printf("address of varS4.i = %p\n", &varS4.i);//main.cpp:120: error: attempt to take address of bit-field structure member ‘s4::i’
+//	printf("address of varS4.j = %p\n", &varS4.j);
+//	printf("address of varS4.a = %p\n", &varS4.a);
+//	printf("address of varS4.b = %p\n", &varS4.b);
 
 	printf("\n---------sizeof 稍微复杂点的例子------\n");
 	double* (*a)[3][6]; // a is a pointer to array[3][6], the array is of type double*;
