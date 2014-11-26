@@ -44,7 +44,7 @@ struct struct_s3 { // 成员和struct_s2一样，顺序和类型，注意对比
 #pragma pack ()
 
 struct s1 {
-	int i :8; // 位域， 一个int有4个B，这里i只占8bit
+	int i :8; // 位域
 	int j :4;
 	int a :3;
 	double b;
@@ -66,11 +66,21 @@ struct s3 {
 };
 
 struct s4 {
-	int i :8;
-	int j :4;
-	int a :3;
+	int i :31;
+	int j :31;
+	int a :2; // 改为1再试试
 	double b;
 };
+
+typedef struct { // from http://akaedu.github.io/book/ch19s04.html
+	unsigned int one :1;
+	unsigned int two :3;
+	unsigned int three :10;
+	unsigned int four :5;
+	unsigned int :2;
+	unsigned int five :8;
+	unsigned int six :8;
+} demo_type;
 
 void printSizeof(int arg[]) {
 	printf("sizeof(arg)   = %lu\n", sizeof(arg)); // 数组类型自动弱化为指针类型
@@ -106,6 +116,8 @@ int main() {
 	printf("sizeof(struct s2) = %lu\n", sizeof(struct s2));
 	printf("sizeof(struct s3) = %lu\n", sizeof(struct s3));
 	printf("sizeof(struct s4) = %lu\n", sizeof(struct s4));
+
+	printf("sizeof(demo_type) = %lu\n", sizeof(demo_type));
 
 	printf("\n---------地址 of 结构体变量------\n");
 	struct struct_s2 ss2;

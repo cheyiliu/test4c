@@ -30,14 +30,15 @@ sizeof(struct struct_s3) = 14
 sizeof(struct s1) = 16
 sizeof(struct s2) = 24
 sizeof(struct s3) = 24
-sizeof(struct s4) = 16
+sizeof(struct s4) = 24
+sizeof(demo_type) = 8
 
 ---------地址 of 结构体变量------
-address of ss2   = 0x7fffe2b24b30
-address of ss2.a = 0x7fffe2b24b30
-address of ss2.b = 0x7fffe2b24b31
-address of ss2.c = 0x7fffe2b24b34
-address of ss2.d = 0x7fffe2b24b38
+address of ss2   = 0x7fffb5ed2770
+address of ss2.a = 0x7fffb5ed2770
+address of ss2.b = 0x7fffb5ed2771
+address of ss2.c = 0x7fffb5ed2774
+address of ss2.d = 0x7fffb5ed2778
 
 ---------sizeof 稍微复杂点的例子------
 8
