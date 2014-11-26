@@ -1,5 +1,25 @@
 #include <stdio.h>
 
+class class_c1 {
+	char a;
+	double b;
+	int c;
+	char d;
+};
+
+class class_c2 { // 多了虚函数后， 将多一个指针指向虚汗数表
+	char a;
+	double b;
+	int c;
+	char d;
+	virtual void printf() {
+	}
+	virtual void printf2() {
+	}
+	virtual ~class_c2() {
+	}
+};
+
 struct struct_s1 {
 	char a;
 	double b;
@@ -28,6 +48,10 @@ void printSizeof(int arg[]) {
 }
 
 int main() {
+	printf("\n---------sizeof 类------\n");
+	printf("sizeof(class_c1) = %lu\n", sizeof(class_c1));
+	printf("sizeof(class_c2) = %lu\n", sizeof(class_c2));
+
 	printf("\n---------sizeof 基本类型------\n");
 	printf("sizeof(char)   = %lu\n", sizeof(char));
 	printf("sizeof(short)  = %lu\n", sizeof(short));
