@@ -79,14 +79,14 @@ struct s4 {
 };
 
 typedef struct { // from http://akaedu.github.io/book/ch19s04.html
-	unsigned int one :1;
+	unsigned int one :1; // 1B，可继续分配3b (1+3)
 	unsigned int two :3;
-	unsigned int three :10;
+	unsigned int three :10; // 2B，可继续分配5b (10+5)
 	unsigned int four :5;
-	unsigned int :2;
-	unsigned int five :8;
-	unsigned int six :8;
-} demo_type;
+	unsigned int :2; // 1B，上一步分配的2B只剩下1b，不够
+	unsigned int five :8; // 1B
+	unsigned int six :8; // 1B。
+} demo_type; // 1.数据自身对齐 1B+2B+1B+1B+1B=6B。 2.结构体以4B来对齐，故最终结果是8B
 
 void printSizeof(int arg[]) {
 	printf("sizeof(arg)   = %lu\n", sizeof(arg)); // 数组类型自动弱化为指针类型
