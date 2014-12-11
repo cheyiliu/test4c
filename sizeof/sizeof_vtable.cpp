@@ -89,6 +89,16 @@ class class_c5: public base1, base2, base3 { // 3个v-table指针
 class class_c6: public class_c5 { // 3个v-table指针
 
 };
+
+class bb: public  base1{
+
+};
+class cc: public  base1{
+
+};
+class dd: public virtual bb, virtual cc{
+
+};
 int main() {
 	printf("\n---------sizeof 类------\n");
 	printf("sizeof(base1) = %lu\n", sizeof(base1));
@@ -102,6 +112,10 @@ int main() {
 	printf("sizeof(class_c4) = %lu\n", sizeof(class_c4));
 	printf("sizeof(class_c5) = %lu\n", sizeof(class_c5));
 	printf("sizeof(class_c6) = %lu\n", sizeof(class_c6));
+
+	printf("sizeof(bb) = %lu\n", sizeof(bb));
+	printf("sizeof(cc) = %lu\n", sizeof(cc));
+	printf("sizeof(dd) = %lu\n", sizeof(dd));
 
 	return 0;
 }
