@@ -2,6 +2,7 @@ test4c
 ======
 
 test proj
+* 20141215 数组和指针
 * 20141211 c++对象内存布局 系列
 * 20141126 sizeof
 * 20141113 add getopt test
