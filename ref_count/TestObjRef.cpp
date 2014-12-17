@@ -63,7 +63,7 @@ int main() {
 
 	ptr->release();	ptr->print(); //3
 	ptr->release();	ptr->print(); //2
-//	ptr->release();	ptr->print(); //1
+	ptr->release();	ptr->print(); //1
 
 	{ // 引用计数
 		UseTestObj useTestObj(ptr);
