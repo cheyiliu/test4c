@@ -40,6 +40,11 @@ int main() {
 
 		cout << ptest123.use_count() << endl;
 		cout << ptest456.use_count() << endl;
+		cout << "----------" << endl;
+		ptest456->print();
+		(*ptest456).print();
+//		(*ptest456)->print();
+		cout << "----------" << endl;
 	}
 	{
 		Test *pTest = new Test(
