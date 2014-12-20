@@ -15,3 +15,5 @@ housy@housy-desktop:~/github/test4c/c_plus_plus_11_右值引用$ ./fixed_case
 ---- exit foo ----
 housy@housy-desktop:~/github/test4c/c_plus_plus_11_右值引用$
 ```
+
+# c++更高效了，顶顶顶
