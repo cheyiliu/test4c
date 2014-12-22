@@ -1,0 +1,1 @@
+g++ testBind.cpp -o testBind -std=c++11

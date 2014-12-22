@@ -2,7 +2,7 @@ test4c
 ======
 
 test proj
-* 20141222 Lambda test
+* 20141222 Lambda bind function test
 * 20141218 c++11右值引用
 * 20141217 智能指针
 * 20141216 增加宏测试/c++引用计数
