@@ -2,6 +2,7 @@ test4c
 ======
 
 test proj
+* 20141225 add 成员函数指针
 * 20141222 Lambda, bind, function, ref/cref test
 * 20141218 c++11右值引用
 * 20141217 智能指针
