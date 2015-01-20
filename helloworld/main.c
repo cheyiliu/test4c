@@ -3,6 +3,7 @@
 int main(){
 	printf("hello world~\n");
 	printf("%d\n", iterate(10));
+	printf("line=%d, file=%s, func=%s\n", __LINE__, __FILE__, __func__);
 	return 1;
 }
 
